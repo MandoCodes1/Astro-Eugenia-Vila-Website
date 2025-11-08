@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets';
-import { getPath } from '../utils/paths';
 
 interface Props {
   lang: 'es' | 'en';
@@ -40,7 +39,7 @@ const { lang, title, subtitle, description, imageSrc, imageAlt } = Astro.props;
             {lang === 'es' ? 'Reservar Cita' : 'Book Appointment'}
           </a>
           <a
-            href={lang === 'es' ? getPath('/es/sobre-mi/') : getPath('/en/about/')}
+            href={lang === 'es' ? '/es/sobre-mi/' : '/en/about/'}
             class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-lg bg-white transition-all hover:scale-105"
             style="color: var(--color-primary);"
           >

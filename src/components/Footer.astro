@@ -1,6 +1,4 @@
 ---
-import { getPath } from '../utils/paths';
-
 interface Props {
   lang: 'es' | 'en';
 }
@@ -39,7 +37,7 @@ const content = {
 };
 
 const t = content[lang];
-const baseUrl = lang === 'es' ? getPath('/es') : getPath('/en');
+const baseUrl = lang === 'es' ? '/es' : '/en';
 ---
 
 <footer class="bg-[var(--color-dark)] text-white py-12">
