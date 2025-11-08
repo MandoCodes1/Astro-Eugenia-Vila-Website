@@ -1,0 +1,106 @@
+---
+interface Props {
+  lang: 'es' | 'en';
+}
+
+const { lang } = Astro.props;
+
+const content = {
+  es: {
+    about: 'Sobre Mí',
+    services: 'Servicios',
+    contact: 'Contacto',
+    address: 'Dirección',
+    addressText: 'El Palo, Málaga, España',
+    phone: 'Teléfono',
+    email: 'Correo',
+    schedule: 'Horario',
+    scheduleText: '1 fin de semana al mes',
+    note: 'Clínica abierta esporádicamente cuando esté en Málaga',
+    rights: 'Todos los derechos reservados.',
+    gdc: 'Registro GDC',
+  },
+  en: {
+    about: 'About',
+    services: 'Services',
+    contact: 'Contact',
+    address: 'Address',
+    addressText: 'El Palo, Málaga, Spain',
+    phone: 'Phone',
+    email: 'Email',
+    schedule: 'Schedule',
+    scheduleText: '1 weekend per month',
+    note: 'Clinic open sporadically when in Málaga',
+    rights: 'All rights reserved.',
+    gdc: 'GDC Registration',
+  },
+};
+
+const t = content[lang];
+const baseUrl = lang === 'es' ? '/es' : '/en';
+---
+
+<footer class="bg-[var(--color-dark)] text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- About Column -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">
+          {lang === 'es' ? 'Dra. Eugenia Vila' : 'Dr. Eugenia Vila'}
+        </h3>
+        <p class="text-gray-300 text-sm">
+          {lang === 'es' 
+            ? 'Más de 30 años de experiencia en odontología. Especialista en implantes, cirugía oral y alineadores.'
+            : 'Over 30 years of experience in dentistry. Specialist in implants, oral surgery, and aligners.'}
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">{lang === 'es' ? 'Enlaces' : 'Links'}</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href={`${baseUrl}/sobre-mi/`} class="text-gray-300 hover:text-white transition-colors">{t.about}</a></li>
+          <li><a href={`${baseUrl}/servicios/`} class="text-gray-300 hover:text-white transition-colors">{t.services}</a></li>
+          <li><a href={`${baseUrl}/contacto/`} class="text-gray-300 hover:text-white transition-colors">{t.contact}</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">{t.contact}</h4>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li>
+            <span class="font-semibold">{t.address}:</span><br />
+            {t.addressText}
+          </li>
+          <li>
+            <span class="font-semibold">{t.phone}:</span><br />
+            <a href="tel:+34679975580" class="hover:text-white transition-colors">+34 679 975 580</a>
+          </li>
+          <li>
+            <span class="font-semibold">{t.email}:</span><br />
+            <a href="mailto:eugeniavila63@gmail.com" class="hover:text-white transition-colors">eugeniavila63@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Professional Info -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">{t.schedule}</h4>
+        <p class="text-sm text-gray-300 mb-4">
+          {t.scheduleText}<br />
+          <span class="text-xs italic">{t.note}</span>
+        </p>
+        <p class="text-xs text-gray-400">
+          {t.gdc}: 287705
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-8 pt-8 border-t border-gray-600 text-center text-sm text-gray-400">
+      <p>© {new Date().getFullYear()} {lang === 'es' ? 'Dra.' : 'Dr.'} Eugenia Vila García. {t.rights}</p>
+    </div>
+  </div>
+</footer>
+

@@ -1,0 +1,22 @@
+---
+// Root page that detects language and redirects
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      // Detect browser language and redirect
+      const browserLang = navigator.language.toLowerCase();
+      const isSpanish = browserLang.startsWith('es');
+      
+      // Redirect to appropriate language
+      window.location.href = isSpanish ? '/es/' : '/es/'; // Default to Spanish as specified
+    </script>
+  </head>
+  <body>
+    <p style="text-align: center; margin-top: 50px;">Redirecting...</p>
+  </body>
+</html>

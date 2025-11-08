@@ -1,0 +1,238 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+const lang = 'en';
+const currentPath = '/en/about/';
+---
+
+<Layout 
+  title="About - Dr. Eugenia Vila" 
+  description="Highly qualified dentist with over 30 years of clinical experience. Master's in Dental Implants and Aesthetics."
+  lang={lang}
+>
+  <Header lang={lang} currentPath={currentPath} />
+  
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-dark)] text-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">About Dr. Eugenia Vila García</h1>
+      <p class="text-xl opacity-90">Experience, Dedication and Excellence in Dentistry</p>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+          <p class="text-lg text-gray-700 leading-relaxed mb-4">
+            Highly qualified Dentist with over 30 years of clinical experience. 
+            Master's in Dental Implants from UIC Barcelona and a Master's in Aesthetics from the University of Córdoba, 
+            with a special interest in Oral Surgery and Aligner Treatment.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Holding degrees in both Medicine and Dentistry, I enjoy providing a holistic approach to treating all my patients. 
+            I also appreciate working in a team-oriented environment that shares the same values as me, which is always to put the patient's interests first.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div class="text-center p-6 bg-blue-50 rounded-xl">
+            <div class="text-4xl font-bold mb-2" style="color: var(--color-primary);">30+</div>
+            <div class="text-gray-600">Years of Experience</div>
+          </div>
+          <div class="text-center p-6 bg-blue-50 rounded-xl">
+            <div class="text-4xl font-bold mb-2" style="color: var(--color-primary);">20,000+</div>
+            <div class="text-gray-600">Patients Treated</div>
+          </div>
+          <div class="text-center p-6 bg-blue-50 rounded-xl">
+            <div class="text-4xl font-bold mb-2" style="color: var(--color-primary);">2024</div>
+            <div class="text-gray-600">Dentist of the Year</div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6" style="color: var(--color-dark);">Education</h2>
+          <div class="space-y-6">
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">Master's in Aesthetic Medicine</h3>
+              <p class="text-gray-600">Universidad de Córdoba, Spain | 2008-2009</p>
+            </div>
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">Master's in Implantology</h3>
+              <p class="text-gray-600">Universitat Internacional de Catalunya, Barcelona | 2002-2003</p>
+            </div>
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">Postgraduate Certificate, Dental Degree Validation</h3>
+              <p class="text-gray-600">Universidad de Murcia, Spain | 1993-1994</p>
+              <p class="text-sm text-gray-500">Validated UNIBE dental degree to practice in the EU</p>
+            </div>
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">Bachelor of Dental Surgery (BDS)</h3>
+              <p class="text-gray-600">Universidad Iberoamericana (UNIBE), Santo Domingo | 1989-1991</p>
+            </div>
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">MBBS, Medicine</h3>
+              <p class="text-gray-600">Universidad de Málaga, Spain | 1982-1989</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6" style="color: var(--color-dark);">Professional Experience</h2>
+          <div class="space-y-8">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-2xl font-semibold mb-2" style="color: var(--color-primary);">Implantologist</h3>
+              <p class="text-gray-600 mb-4">Dental Art Implant Clinics, London, UK | Sep 2022 - Present</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Lead complex implant treatments and full-mouth rehabilitations, taking advantage of a fully digital workflow with CBCT imaging and intraoral scanning (3Shape & Medit).</li>
+                <li>• Plan and execute implant surgeries, including bone grafting, sinus lifts, and prosthetic restorations.</li>
+                <li>• Provide end-to-end care: initial implant assessment, surgical placement, prosthetic planning, and long-term maintenance.</li>
+                <li>• Awarded Dentist of the Year 2024, recognised by patients and peers for outstanding clinical outcomes and patient satisfaction.</li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-2xl font-semibold mb-2" style="color: var(--color-primary);">General Dentist & Implantologist</h3>
+              <p class="text-gray-600 mb-4">Clinica Dental Dra. Eugenia Vila, Málaga, Spain | 1994 - Sep 2022</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Performed implant surgery and full-mouth rehabilitation, combining implants, aligner therapy, bonding, and oral surgery in complex treatment plans.</li>
+                <li>• Treated more than 20,000 patients, maintaining continuous full-scope private care over 28 years.</li>
+                <li>• Completed thousands of dental implant placements, bone grafts, periodontal treatments, extractions, restorations, cosmetic bonding, fillings, and aligner-led smile corrections.</li>
+                <li>• Managed day-to-day clinic operations, from patient flow and case coordination to mentoring staff and maintaining clinical standards.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6" style="color: var(--color-dark);">Specialties</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">🦷</div>
+              <div class="font-semibold">Dental Implants</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">⚕️</div>
+              <div class="font-semibold">Oral Surgery</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">😁</div>
+              <div class="font-semibold">Aligners</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">✨</div>
+              <div class="font-semibold">Cosmetic Dentistry</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">🔧</div>
+              <div class="font-semibold">Prosthetics</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">💎</div>
+              <div class="font-semibold">Bonding</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">💻</div>
+              <div class="font-semibold">Digital Tools</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">🏆</div>
+              <div class="font-semibold">Clinical Excellence</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Awards & Memberships -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Awards</h2>
+            <div class="bg-yellow-50 rounded-lg p-6">
+              <div class="text-4xl mb-2">🏆</div>
+              <h3 class="text-xl font-semibold mb-1">Dentist of the Year - 2024</h3>
+              <p class="text-gray-600">Dental Art Implant Clinic</p>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Professional Memberships</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-2xl mr-3">✓</span>
+                <div>
+                  <div class="font-semibold">Royal College of Surgeons Ireland (RCSI)</div>
+                  <div class="text-sm text-gray-600">Affiliate since 2021</div>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-2xl mr-3">✓</span>
+                <div>
+                  <div class="font-semibold">Colegio Oficial de Dentistas de Málaga</div>
+                  <div class="text-sm text-gray-600">Member since 1994</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Languages & Personal -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Languages</h2>
+            <div class="flex gap-4">
+              <div class="bg-blue-50 rounded-lg p-4 flex-1 text-center">
+                <div class="text-2xl mb-1">🇪🇸</div>
+                <div class="font-semibold">Spanish</div>
+              </div>
+              <div class="bg-blue-50 rounded-lg p-4 flex-1 text-center">
+                <div class="text-2xl mb-1">🇬🇧</div>
+                <div class="font-semibold">English</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Personal Life</h2>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Family is my biggest priority. I have two sons.</li>
+              <li>• Love playing tennis, traveling, cooking and living an active lifestyle.</li>
+              <li>• Passionate about healthy food.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Licenses -->
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Licenses</h2>
+          <p class="text-lg"><strong>General Dental Council (GDC) Registration Number:</strong> 287705</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-dark)] text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Want to learn more?</h2>
+      <p class="text-xl mb-8 opacity-90">Schedule your appointment and discover the difference of being treated by an experienced professional</p>
+      <a
+        href="https://wa.me/34679975580"
+        class="inline-flex items-center px-8 py-4 bg-white rounded-lg font-semibold text-lg transition-all hover:scale-105"
+        style="color: var(--color-primary);"
+      >
+        Book Appointment via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+  <WhatsAppButton lang={lang} />
+</Layout>
+

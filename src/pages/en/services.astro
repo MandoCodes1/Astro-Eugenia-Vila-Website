@@ -1,0 +1,243 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import { t } from '../../utils/i18n';
+
+const lang = 'en';
+const currentPath = '/en/services/';
+
+const services = [
+  {
+    title: t(lang, 'dentalImplants'),
+    description: t(lang, 'dentalImplantsDesc'),
+    icon: '🦷',
+    details: [
+      'Digital planning with CBCT and intraoral scanning',
+      'Implant surgery with advanced techniques',
+      'Bone grafts and sinus lifts',
+      'Custom prosthetic restorations',
+      'Long-term follow-up',
+    ],
+  },
+  {
+    title: t(lang, 'oralSurgery'),
+    description: t(lang, 'oralSurgeryDesc'),
+    icon: '⚕️',
+    details: [
+      'Simple and complex extractions',
+      'Wisdom tooth removal',
+      'Periodontal surgery',
+      'Soft and hard tissue grafts',
+      'Pre-prosthetic surgery',
+    ],
+  },
+  {
+    title: t(lang, 'aligners'),
+    description: t(lang, 'alignersDesc'),
+    icon: '😁',
+    details: [
+      '3D assessment and planning',
+      'Custom clear aligners',
+      'Certified Level II treatment',
+      'Malocclusion correction',
+      'Regular monitoring and adjustments',
+    ],
+  },
+  {
+    title: t(lang, 'cosmeticDentistry'),
+    description: t(lang, 'cosmeticDentistryDesc'),
+    icon: '✨',
+    details: [
+      'Porcelain veneers',
+      'Professional teeth whitening',
+      'Digital smile design',
+      'Hyaluronic acid fillers',
+      'Aesthetic corrections',
+    ],
+  },
+  {
+    title: t(lang, 'prosthetics'),
+    description: t(lang, 'prostheticsDesc'),
+    icon: '🔧',
+    details: [
+      'Crowns and bridges',
+      'Implant-supported prosthetics',
+      'Removable dentures',
+      'Full mouth rehabilitations',
+      'CAD/CAM technology',
+    ],
+  },
+  {
+    title: t(lang, 'bonding'),
+    description: t(lang, 'bondingDesc'),
+    icon: '💎',
+    details: [
+      'High-quality cosmetic composite',
+      'Tooth reconstructions',
+      'Fracture repair',
+      'Diastema closure',
+      'Natural and lasting results',
+    ],
+  },
+];
+---
+
+<Layout 
+  title="Services - Dr. Eugenia Vila" 
+  description="Comprehensive dental services: implants, oral surgery, aligners, cosmetic dentistry and more. Cutting-edge technology in Málaga."
+  lang={lang}
+>
+  <Header lang={lang} currentPath={currentPath} />
+  
+  <section class="py-16 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-dark)] text-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+      <p class="text-xl opacity-90 max-w-3xl">
+        Comprehensive dental care with over 30 years of experience and cutting-edge technology
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {services.map((service) => (
+          <ServiceCard
+            title={service.title}
+            description={service.description}
+            icon={service.icon}
+          />
+        ))}
+      </div>
+
+      <div class="max-w-5xl mx-auto space-y-12">
+        {services.map((service) => (
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="text-5xl">{service.icon}</div>
+              <div>
+                <h2 class="text-3xl font-bold mb-2" style="color: var(--color-primary);">
+                  {service.title}
+                </h2>
+                <p class="text-lg text-gray-600">{service.description}</p>
+              </div>
+            </div>
+            <ul class="grid md:grid-cols-2 gap-3">
+              {service.details.map((detail) => (
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 mr-2 flex-shrink-0" style="color: var(--color-primary);" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-gray-700">{detail}</span>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-6">
+              <a
+                href="https://wa.me/34679975580"
+                class="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white transition-all hover:scale-105"
+                style="background-color: var(--color-primary);"
+              >
+                Ask about {service.title}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--color-dark);">
+          Cutting-Edge Technology
+        </h2>
+        <p class="text-lg text-gray-700 mb-12">
+          We use the latest technologies to provide precise, comfortable and effective treatments
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <div class="text-4xl mb-3">📷</div>
+            <div class="font-semibold">CBCT Imaging</div>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <div class="text-4xl mb-3">🦷</div>
+            <div class="font-semibold">Intraoral Scanning</div>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <div class="text-4xl mb-3">💻</div>
+            <div class="font-semibold">Digital Planning</div>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <div class="text-4xl mb-3">🔬</div>
+            <div class="font-semibold">Premium Materials</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" style="color: var(--color-dark);">
+          Why Choose Us?
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="flex items-start gap-4">
+            <div class="text-4xl">✓</div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2" style="color: var(--color-primary);">30+ Years Experience</h3>
+              <p class="text-gray-600">Proven expertise in all aspects of dentistry</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="text-4xl">✓</div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2" style="color: var(--color-primary);">High Quality Materials</h3>
+              <p class="text-gray-600">We use only the best materials available</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="text-4xl">✓</div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2" style="color: var(--color-primary);">Competitive Pricing</h3>
+              <p class="text-gray-600">Excellent quality at fair and competitive prices</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="text-4xl">✓</div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2" style="color: var(--color-primary);">Personalized Approach</h3>
+              <p class="text-gray-600">Each patient receives an individualized treatment plan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-dark)] text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to start your treatment?</h2>
+      <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+        Contact us today to discuss your needs and create a personalized treatment plan
+      </p>
+      <a
+        href="https://wa.me/34679975580"
+        class="inline-flex items-center px-8 py-4 bg-white rounded-lg font-semibold text-lg transition-all hover:scale-105"
+        style="color: var(--color-primary);"
+      >
+        Book Consultation via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+  <WhatsAppButton lang={lang} />
+</Layout>
+

@@ -1,0 +1,102 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
+const { currentPage, totalPages, baseUrl } = Astro.props;
+
+const getPageUrl = (page: number) => `${baseUrl}?page=${page}`;
+
+// Generate page numbers to show
+const getPageNumbers = () => {
+  const pages: (number | string)[] = [];
+  const maxVisible = 7;
+  
+  if (totalPages <= maxVisible) {
+    return Array.from({ length: totalPages }, (_, i) => i + 1);
+  }
+  
+  // Always show first page
+  pages.push(1);
+  
+  if (currentPage > 3) {
+    pages.push('...');
+  }
+  
+  // Show pages around current
+  for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+    pages.push(i);
+  }
+  
+  if (currentPage < totalPages - 2) {
+    pages.push('...');
+  }
+  
+  // Always show last page
+  if (totalPages > 1) {
+    pages.push(totalPages);
+  }
+  
+  return pages;
+};
+
+const pages = getPageNumbers();
+---
+
+<nav class="flex justify-center items-center gap-2" aria-label="Pagination">
+  <!-- Previous Button -->
+  {currentPage > 1 ? (
+    <a
+      href={getPageUrl(currentPage - 1)}
+      class="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
+    >
+      ←
+    </a>
+  ) : (
+    <span class="px-4 py-2 rounded-lg border border-gray-200 text-gray-400 cursor-not-allowed">
+      ←
+    </span>
+  )}
+
+  <!-- Page Numbers -->
+  {pages.map((page) => (
+    typeof page === 'number' ? (
+      page === currentPage ? (
+        <span
+          class="px-4 py-2 rounded-lg font-semibold text-white"
+          style="background-color: var(--color-primary);"
+        >
+          {page}
+        </span>
+      ) : (
+        <a
+          href={getPageUrl(page)}
+          class="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
+        >
+          {page}
+        </a>
+      )
+    ) : (
+      <span class="px-2 py-2 text-gray-400">
+        {page}
+      </span>
+    )
+  ))}
+
+  <!-- Next Button -->
+  {currentPage < totalPages ? (
+    <a
+      href={getPageUrl(currentPage + 1)}
+      class="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
+    >
+      →
+    </a>
+  ) : (
+    <span class="px-4 py-2 rounded-lg border border-gray-200 text-gray-400 cursor-not-allowed">
+      →
+    </span>
+  )}
+</nav>
+

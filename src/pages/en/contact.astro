@@ -1,0 +1,188 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+const lang = 'en';
+const currentPath = '/en/contact/';
+---
+
+<Layout 
+  title="Contact - Dr. Eugenia Vila" 
+  description="Contact Dr. Eugenia Vila in El Palo, Málaga. Book your appointment via WhatsApp. Clinic open 1 weekend per month."
+  lang={lang}
+>
+  <Header lang={lang} currentPath={currentPath} />
+  
+  <section class="py-16 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-dark)] text-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact</h1>
+      <p class="text-xl opacity-90">We're here to help with your dental health</p>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div>
+          <h2 class="text-3xl font-bold mb-8" style="color: var(--color-dark);">Contact Information</h2>
+          
+          <div class="space-y-6">
+            <div class="bg-green-50 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <div class="text-4xl">💬</div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2" style="color: #25D366;">WhatsApp (Preferred)</h3>
+                  <p class="text-gray-600 mb-3">
+                    The best way to contact me is via WhatsApp. I respond quickly and we can easily arrange your appointment.
+                  </p>
+                  <a
+                    href="https://wa.me/34679975580"
+                    class="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white transition-all hover:scale-105"
+                    style="background-color: #25D366;"
+                  >
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    Send WhatsApp Message
+                  </a>
+                  <p class="text-sm text-gray-500 mt-2">+34 679 975 580</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-md">
+              <div class="flex items-start gap-4">
+                <div class="text-4xl">📞</div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2" style="color: var(--color-primary);">Phone</h3>
+                  <p class="text-gray-600 mb-2">
+                    I prefer text messages, but you can also call:
+                  </p>
+                  <a href="tel:+34679975580" class="text-lg font-semibold" style="color: var(--color-primary);">
+                    +34 679 975 580
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-md">
+              <div class="flex items-start gap-4">
+                <div class="text-4xl">✉️</div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2" style="color: var(--color-primary);">Email</h3>
+                  <a href="mailto:eugeniavila63@gmail.com" class="text-lg" style="color: var(--color-primary);">
+                    eugeniavila63@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-md">
+              <div class="flex items-start gap-4">
+                <div class="text-4xl">📍</div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2" style="color: var(--color-primary);">Location</h3>
+                  <p class="text-lg text-gray-700 mb-2">
+                    Clinica Dental Dra. Eugenia Vila<br />
+                    El Palo, Málaga, Spain
+                  </p>
+                  <a 
+                    href="https://www.google.com/maps/place/Clinica+Dental+Dra.+Eugenia+Vila/@36.7212611,-4.363744,17z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-600 hover:underline"
+                  >
+                    View on Google Maps →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-bold mb-8" style="color: var(--color-dark);">Schedule & Information</h2>
+          
+          <div class="bg-blue-50 rounded-xl p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4" style="color: var(--color-primary);">Opening Hours</h3>
+            <div class="space-y-4 text-gray-700">
+              <p class="text-lg">
+                <strong>Málaga:</strong> 1 weekend per month
+              </p>
+              <p class="text-lg">
+                <strong>London:</strong> 4-5 days per week
+              </p>
+              <p class="text-base bg-white rounded-lg p-4">
+                ℹ️ The Málaga clinic is open sporadically when in the city. 
+                Please contact via WhatsApp to arrange your appointment and confirm availability.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-md mb-8">
+            <h3 class="text-2xl font-semibold mb-4" style="color: var(--color-primary);">Important Information</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-2xl mr-3">✓</span>
+                <span>First consultation: complete evaluation and personalized treatment plan</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-2xl mr-3">✓</span>
+                <span>Highest quality materials</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-2xl mr-3">✓</span>
+                <span>Competitive and transparent pricing</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-2xl mr-3">✓</span>
+                <span>Care in Spanish and English</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-2xl mr-3">✓</span>
+                <span>Advanced digital technology (CBCT, intraoral scanning)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-dark)] rounded-xl p-8 text-white">
+            <h3 class="text-2xl font-semibold mb-4">Professional Registration</h3>
+            <p class="text-lg mb-2">General Dental Council (GDC)</p>
+            <p class="text-3xl font-bold">287705</p>
+            <p class="text-sm opacity-90 mt-4">
+              Dentist of the Year 2024 - Dental Art Implant Clinic
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center" style="color: var(--color-dark);">Our Location</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.0166966!2d-4.363744!3d36.7212611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7259d6897597c3%3A0x48544afb3aaf06a4!2sClinica%20Dental%20Dra.%20Eugenia%20Vila!5e0!3m2!1sen!2s!4v1234567890"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <p class="text-center text-gray-600 mt-4">
+          Clinica Dental Dra. Eugenia Vila - El Palo, Málaga, Spain
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+  <WhatsAppButton lang={lang} />
+</Layout>
+

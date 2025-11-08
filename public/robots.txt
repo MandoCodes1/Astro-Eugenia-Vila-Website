@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miguelkylerivera.github.io/Astro-Eugenia-Vila-Website/sitemap.xml
+

@@ -1,0 +1,123 @@
+---
+interface Props {
+  beforeImage: string;
+  afterImage: string;
+  title: string;
+  description?: string;
+  index: number;
+}
+
+const { beforeImage, afterImage, title, description, index } = Astro.props;
+---
+
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+  <div class="p-4">
+    <h3 class="text-xl font-semibold mb-4 text-center" style="color: var(--color-primary);">
+      {title}
+    </h3>
+    
+    <!-- Before Image -->
+    <div class="mb-2">
+      <div class="relative">
+        <div class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 rounded-md font-semibold text-sm z-10">
+          Antes
+        </div>
+        <button
+          data-lightbox-trigger={`case-${index}-before`}
+          class="w-full cursor-pointer hover:opacity-90 transition-opacity"
+        >
+          <img
+            src={beforeImage}
+            alt={`Antes - ${title}`}
+            class="w-full h-64 object-cover rounded-lg"
+            loading="lazy"
+          />
+        </button>
+      </div>
+    </div>
+
+    <!-- After Image -->
+    <div>
+      <div class="relative">
+        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-md font-semibold text-sm z-10">
+          Después
+        </div>
+        <button
+          data-lightbox-trigger={`case-${index}-after`}
+          class="w-full cursor-pointer hover:opacity-90 transition-opacity"
+        >
+          <img
+            src={afterImage}
+            alt={`Después - ${title}`}
+            class="w-full h-64 object-cover rounded-lg"
+            loading="lazy"
+          />
+        </button>
+      </div>
+    </div>
+
+    {description && (
+      <p class="mt-4 text-gray-600 text-sm text-center">
+        {description}
+      </p>
+    )}
+  </div>
+</div>
+
+<!-- Lightbox Modals -->
+<div id={`lightbox-case-${index}-before`} class="lightbox hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+  <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 lightbox-close">&times;</button>
+  <img src={beforeImage} alt={`Antes - ${title}`} class="max-w-full max-h-full object-contain" />
+</div>
+
+<div id={`lightbox-case-${index}-after`} class="lightbox hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+  <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 lightbox-close">&times;</button>
+  <img src={afterImage} alt={`Después - ${title}`} class="max-w-full max-h-full object-contain" />
+</div>
+
+<script>
+  // Lightbox functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    // Open lightbox
+    document.querySelectorAll('[data-lightbox-trigger]').forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
+        const lightboxId = (e.currentTarget as HTMLElement).getAttribute('data-lightbox-trigger');
+        const lightbox = document.getElementById(`lightbox-${lightboxId}`);
+        if (lightbox) {
+          lightbox.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    // Close lightbox
+    document.querySelectorAll('.lightbox-close, .lightbox').forEach((element) => {
+      element.addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) {
+          const lightbox = e.currentTarget as HTMLElement;
+          if (lightbox.classList.contains('lightbox')) {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+          } else {
+            const parent = lightbox.closest('.lightbox') as HTMLElement;
+            if (parent) {
+              parent.classList.add('hidden');
+              document.body.style.overflow = 'auto';
+            }
+          }
+        }
+      });
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.lightbox').forEach((lightbox) => {
+          lightbox.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        });
+      }
+    });
+  });
+</script>
+

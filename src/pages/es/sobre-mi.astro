@@ -1,0 +1,238 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+const lang = 'es';
+const currentPath = '/es/sobre-mi/';
+---
+
+<Layout 
+  title="Sobre Mí - Dra. Eugenia Vila" 
+  description="Dentista altamente cualificada con más de 30 años de experiencia clínica. Máster en Implantes Dentales y Estética."
+  lang={lang}
+>
+  <Header lang={lang} currentPath={currentPath} />
+  
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-dark)] text-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Sobre la Dra. Eugenia Vila García</h1>
+      <p class="text-xl opacity-90">Experiencia, Dedicación y Excelencia en Odontología</p>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+          <p class="text-lg text-gray-700 leading-relaxed mb-4">
+            Dentista altamente cualificada con más de 30 años de experiencia clínica. 
+            Máster en Implantes Dentales por la UIC Barcelona y Máster en Estética por la Universidad de Córdoba, 
+            con especial interés en Cirugía Oral y Tratamiento con Alineadores.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Con títulos en Medicina y Odontología, disfruto ofreciendo un enfoque integral para tratar a todos mis pacientes. 
+            También valoro trabajar en un entorno orientado al equipo que comparte mis mismos valores, que siempre es poner los intereses del paciente en primer lugar.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div class="text-center p-6 bg-blue-50 rounded-xl">
+            <div class="text-4xl font-bold mb-2" style="color: var(--color-primary);">30+</div>
+            <div class="text-gray-600">Años de Experiencia</div>
+          </div>
+          <div class="text-center p-6 bg-blue-50 rounded-xl">
+            <div class="text-4xl font-bold mb-2" style="color: var(--color-primary);">20,000+</div>
+            <div class="text-gray-600">Pacientes Tratados</div>
+          </div>
+          <div class="text-center p-6 bg-blue-50 rounded-xl">
+            <div class="text-4xl font-bold mb-2" style="color: var(--color-primary);">2024</div>
+            <div class="text-gray-600">Dentista del Año</div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6" style="color: var(--color-dark);">Educación</h2>
+          <div class="space-y-6">
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">Máster en Medicina Estética</h3>
+              <p class="text-gray-600">Universidad de Córdoba, España | 2008-2009</p>
+            </div>
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">Máster en Implantología</h3>
+              <p class="text-gray-600">Universitat Internacional de Catalunya, Barcelona | 2002-2003</p>
+            </div>
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">Certificado de Posgrado en Odontología</h3>
+              <p class="text-gray-600">Universidad de Murcia, España | 1993-1994</p>
+              <p class="text-sm text-gray-500">Convalidación del título de UNIBE para ejercer en la UE</p>
+            </div>
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">Licenciatura en Cirugía Dental (BDS)</h3>
+              <p class="text-gray-600">Universidad Iberoamericana (UNIBE), Santo Domingo | 1989-1991</p>
+            </div>
+            <div class="border-l-4 pl-6 py-2" style="border-color: var(--color-primary);">
+              <h3 class="text-xl font-semibold mb-1">Licenciatura en Medicina (MBBS)</h3>
+              <p class="text-gray-600">Universidad de Málaga, España | 1982-1989</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6" style="color: var(--color-dark);">Experiencia Profesional</h2>
+          <div class="space-y-8">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-2xl font-semibold mb-2" style="color: var(--color-primary);">Implantóloga</h3>
+              <p class="text-gray-600 mb-4">Dental Art Implant Clinics, Londres, Reino Unido | Sep 2022 - Presente</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Realizo tratamientos complejos de implantes y rehabilitaciones completas, aprovechando un flujo de trabajo completamente digital con imágenes CBCT y escaneo intraoral (3Shape & Medit).</li>
+                <li>• Planifico y ejecuto cirugías de implantes, incluyendo injertos óseos, elevaciones de seno y restauraciones protésicas.</li>
+                <li>• Proporciono atención integral: evaluación inicial de implantes, colocación quirúrgica, planificación protésica y mantenimiento a largo plazo.</li>
+                <li>• Galardonada como Dentista del Año 2024, reconocida por pacientes y colegas por resultados clínicos excepcionales y satisfacción del paciente.</li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-2xl font-semibold mb-2" style="color: var(--color-primary);">Dentista General e Implantóloga</h3>
+              <p class="text-gray-600 mb-4">Clínica Dental Dra. Eugenia Vila, Málaga, España | 1994 - Sep 2022</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Realicé cirugías de implantes y rehabilitaciones completas, combinando implantes, terapia con alineadores, bonding y cirugía oral en planes de tratamiento complejos.</li>
+                <li>• Traté a más de 20,000 pacientes, manteniendo una atención privada integral durante 28 años.</li>
+                <li>• Completé miles de colocaciones de implantes dentales, injertos óseos, tratamientos periodontales, extracciones, restauraciones, bonding cosmético, empastes y correcciones de sonrisa con alineadores.</li>
+                <li>• Gestioné las operaciones diarias de la clínica, desde el flujo de pacientes y coordinación de casos hasta la mentoría del personal y el mantenimiento de estándares clínicos.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6" style="color: var(--color-dark);">Especialidades</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">🦷</div>
+              <div class="font-semibold">Implantes Dentales</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">⚕️</div>
+              <div class="font-semibold">Cirugía Oral</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">😁</div>
+              <div class="font-semibold">Alineadores</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">✨</div>
+              <div class="font-semibold">Odontología Estética</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">🔧</div>
+              <div class="font-semibold">Prótesis</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">💎</div>
+              <div class="font-semibold">Bonding</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">💻</div>
+              <div class="font-semibold">Herramientas Digitales</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-4 text-center">
+              <div class="text-3xl mb-2">🏆</div>
+              <div class="font-semibold">Excelencia Clínica</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Awards & Memberships -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Premios</h2>
+            <div class="bg-yellow-50 rounded-lg p-6">
+              <div class="text-4xl mb-2">🏆</div>
+              <h3 class="text-xl font-semibold mb-1">Dentista del Año - 2024</h3>
+              <p class="text-gray-600">Dental Art Implant Clinic</p>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Membresías Profesionales</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-2xl mr-3">✓</span>
+                <div>
+                  <div class="font-semibold">Royal College of Surgeons Ireland (RCSI)</div>
+                  <div class="text-sm text-gray-600">Afiliada desde 2021</div>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-2xl mr-3">✓</span>
+                <div>
+                  <div class="font-semibold">Colegio Oficial de Dentistas de Málaga</div>
+                  <div class="text-sm text-gray-600">Miembro desde 1994</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Languages & Personal -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Idiomas</h2>
+            <div class="flex gap-4">
+              <div class="bg-blue-50 rounded-lg p-4 flex-1 text-center">
+                <div class="text-2xl mb-1">🇪🇸</div>
+                <div class="font-semibold">Español</div>
+              </div>
+              <div class="bg-blue-50 rounded-lg p-4 flex-1 text-center">
+                <div class="text-2xl mb-1">🇬🇧</div>
+                <div class="font-semibold">Inglés</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Vida Personal</h2>
+            <ul class="space-y-2 text-gray-700">
+              <li>• La familia es mi mayor prioridad. Tengo dos hijos.</li>
+              <li>• Me encanta jugar al tenis, viajar, cocinar y llevar un estilo de vida activo.</li>
+              <li>• Apasionada por la alimentación saludable.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Licenses -->
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h2 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">Licencias</h2>
+          <p class="text-lg"><strong>Número de Registro del General Dental Council (GDC):</strong> 287705</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-dark)] text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Quieres conocer más?</h2>
+      <p class="text-xl mb-8 opacity-90">Agenda tu cita y descubre la diferencia de ser tratado por una profesional experimentada</p>
+      <a
+        href="https://wa.me/34679975580"
+        class="inline-flex items-center px-8 py-4 bg-white rounded-lg font-semibold text-lg transition-all hover:scale-105"
+        style="color: var(--color-primary);"
+      >
+        Reservar Cita por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+  <WhatsAppButton lang={lang} />
+</Layout>
+
