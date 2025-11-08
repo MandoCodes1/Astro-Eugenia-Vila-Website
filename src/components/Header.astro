@@ -1,5 +1,6 @@
 ---
 import LanguageToggle from './LanguageToggle.astro';
+import { getPath } from '../utils/paths';
 
 interface Props {
   lang: 'es' | 'en';
@@ -10,20 +11,20 @@ const { lang, currentPath } = Astro.props;
 
 const navItems = {
   es: [
-    { href: '/es/', label: 'Inicio' },
-    { href: '/es/sobre-mi/', label: 'Sobre Mí' },
-    { href: '/es/servicios/', label: 'Servicios' },
-    { href: '/es/casos/', label: 'Casos' },
-    { href: '/es/opiniones/', label: 'Opiniones' },
-    { href: '/es/contacto/', label: 'Contacto' },
+    { href: getPath('/es/'), label: 'Inicio' },
+    { href: getPath('/es/sobre-mi/'), label: 'Sobre Mí' },
+    { href: getPath('/es/servicios/'), label: 'Servicios' },
+    { href: getPath('/es/casos/'), label: 'Casos' },
+    { href: getPath('/es/opiniones/'), label: 'Opiniones' },
+    { href: getPath('/es/contacto/'), label: 'Contacto' },
   ],
   en: [
-    { href: '/en/', label: 'Home' },
-    { href: '/en/about/', label: 'About' },
-    { href: '/en/services/', label: 'Services' },
-    { href: '/en/cases/', label: 'Cases' },
-    { href: '/en/reviews/', label: 'Reviews' },
-    { href: '/en/contact/', label: 'Contact' },
+    { href: getPath('/en/'), label: 'Home' },
+    { href: getPath('/en/about/'), label: 'About' },
+    { href: getPath('/en/services/'), label: 'Services' },
+    { href: getPath('/en/cases/'), label: 'Cases' },
+    { href: getPath('/en/reviews/'), label: 'Reviews' },
+    { href: getPath('/en/contact/'), label: 'Contact' },
   ],
 };
 
@@ -35,7 +36,7 @@ const isActive = (href: string) => currentPath === href || currentPath.startsWit
   <nav class="container mx-auto px-4 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <a href={lang === 'es' ? '/es/' : '/en/'} class="flex items-center space-x-2">
+      <a href={lang === 'es' ? getPath('/es/') : getPath('/en/')} class="flex items-center space-x-2">
         <span class="text-2xl font-bold" style="color: var(--color-primary);">
           {lang === 'es' ? 'Dra. Eugenia Vila' : 'Dr. Eugenia Vila'}
         </span>

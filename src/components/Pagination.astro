@@ -1,4 +1,6 @@
 ---
+import { getPath } from '../utils/paths';
+
 interface Props {
   currentPage: number;
   totalPages: number;
@@ -7,7 +9,7 @@ interface Props {
 
 const { currentPage, totalPages, baseUrl } = Astro.props;
 
-const getPageUrl = (page: number) => `${baseUrl}?page=${page}`;
+const getPageUrl = (page: number) => `${getPath(baseUrl)}?page=${page}`;
 
 // Generate page numbers to show
 const getPageNumbers = () => {
