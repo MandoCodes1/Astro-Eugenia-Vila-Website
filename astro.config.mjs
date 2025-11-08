@@ -7,8 +7,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://miguelkylerivera.github.io',
-  base: '/Astro-Eugenia-Vila-Website',
+  site: 'https://mandocodes1.github.io',
+  base: '/Dr-Eugenia-Vila',
   trailingSlash: 'always',
 
   vite: {
