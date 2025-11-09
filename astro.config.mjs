@@ -1,19 +1,20 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
-import tailwindcss from '@tailwindcss/vite';
-
+import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mandocodes1.github.io',
-  base: '/Dr-Eugenia-Vila',
+  // Comment out base path for local development
+  // Uncomment when deploying to GitHub Pages
+  // base: '/Dr-Eugenia-Vila',
   trailingSlash: 'always',
 
-  vite: {
-    plugins: [tailwindcss()]
-  },
-
-  integrations: [sitemap()]
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    sitemap()
+  ]
 });
