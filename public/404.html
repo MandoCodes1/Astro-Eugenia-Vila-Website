@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script>
+    // Get the current path
+    const currentPath = window.location.pathname;
+    const basePath = '/Astro-Eugenia-Vila-Website';
+    
+    // Remove leading/trailing slashes and normalize
+    const normalizedPath = currentPath.replace(/^\/+|\/+$/g, '');
+    
+    // If path starts with base path, redirect to Spanish home
+    if (normalizedPath.startsWith('Astro-Eugenia-Vila-Website')) {
+      window.location.href = basePath + '/es/';
+    }
+    // If path is just 'es' or 'en', add base path
+    else if (normalizedPath === 'es' || normalizedPath === 'en') {
+      window.location.href = basePath + '/' + normalizedPath + '/';
+    }
+    // If path starts with 'es/' or 'en/', add base path
+    else if (normalizedPath.startsWith('es/') || normalizedPath.startsWith('en/')) {
+      window.location.href = basePath + '/' + normalizedPath + '/';
+    }
+    // Default: redirect to Spanish home with base path
+    else {
+      window.location.href = basePath + '/es/';
+    }
+  </script>
+</head>
+<body>
+  <p style="text-align: center; margin-top: 50px; font-family: system-ui, sans-serif;">
+    Redirecting...
+  </p>
+</body>
+</html>
+

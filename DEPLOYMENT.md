@@ -48,6 +48,7 @@ git push -u origin main
 ### 4. Enable GitHub Actions
 
 The deployment workflow (`.github/workflows/deploy.yml`) will automatically:
+
 1. Install dependencies
 2. Build the site
 3. Deploy to GitHub Pages
@@ -64,9 +65,9 @@ In `astro.config.mjs`, change:
 
 ```javascript
 export default defineConfig({
-  site: 'https://your-custom-domain.com', // Change this
-  base: '/', // Change to '/' for custom domain
-  trailingSlash: 'always',
+  site: "https://your-custom-domain.com", // Change this
+  base: "/", // Change to '/' for custom domain
+  trailingSlash: "always",
   // ... rest of config
 });
 ```
@@ -76,6 +77,7 @@ export default defineConfig({
 Add these DNS records at your domain registrar:
 
 **For apex domain (example.com):**
+
 ```
 Type: A
 Name: @
@@ -86,6 +88,7 @@ Value: 185.199.111.153
 ```
 
 **For www subdomain:**
+
 ```
 Type: CNAME
 Name: www
@@ -146,17 +149,20 @@ git push
 ## Troubleshooting
 
 ### Site not loading after deployment
+
 - Check GitHub Actions tab for build errors
 - Verify the `base` path in `astro.config.mjs` matches your repository name
 - Ensure GitHub Pages is enabled in repository settings
 
 ### Custom domain not working
+
 - Verify DNS records are correctly configured
 - Wait 24-48 hours for DNS propagation
 - Check that CNAME file exists in repository root
 - Ensure "Enforce HTTPS" is enabled
 
 ### Images not showing
+
 - Verify image paths start with `/assets/` or `/public/`
 - Check that images are committed to the repository
 - Clear browser cache
@@ -164,6 +170,7 @@ git push
 ## Performance Monitoring
 
 After deployment:
+
 1. Test mobile performance with Google PageSpeed Insights
 2. Verify all pages load correctly
 3. Check that WhatsApp links work on mobile
@@ -173,7 +180,7 @@ After deployment:
 ## Support
 
 For issues or questions:
+
 - Check GitHub Actions logs for deployment errors
 - Review Astro documentation: https://docs.astro.build
 - Check GitHub Pages documentation: https://docs.github.com/pages
-

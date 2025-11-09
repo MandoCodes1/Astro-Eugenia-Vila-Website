@@ -16,6 +16,7 @@ npm run dev
 Visit: http://localhost:4321
 
 **Test:**
+
 - Homepage (should redirect to `/es/`)
 - All Spanish pages: Home, Sobre Mí, Servicios, Casos, Opiniones, Contacto
 - Language toggle to English
@@ -71,6 +72,7 @@ git push -u origin main
 ## 📱 Share with Dr. Vila
 
 Once deployed, create a QR code for the website:
+
 - Use: https://www.qr-code-generator.com/
 - Enter your GitHub Pages URL
 - Download and share with Dr. Vila
@@ -78,6 +80,7 @@ Once deployed, create a QR code for the website:
 ## 🔄 Making Updates
 
 ### Update Content
+
 ```bash
 # Edit files in src/pages/
 npm run dev  # Test locally
@@ -95,13 +98,14 @@ git push  # Auto-deploys via GitHub Actions
 5. Commit and push
 
 Example:
+
 ```javascript
 const cases = [
   {
-    title: 'Rehabilitación con Implantes',
-    beforeImage: '/assets/images/dental_cases/implant-01-before.jpg',
-    afterImage: '/assets/images/dental_cases/implant-01-after.jpg',
-    description: 'Restauración completa con implantes dentales',
+    title: "Rehabilitación con Implantes",
+    beforeImage: "/assets/images/dental_cases/implant-01-before.jpg",
+    afterImage: "/assets/images/dental_cases/implant-01-after.jpg",
+    description: "Restauración completa con implantes dentales",
   },
   // Add more cases...
 ];
@@ -128,6 +132,7 @@ Edit `data/reviews.json` and add new review objects following the existing forma
 ## 📊 What's Built
 
 ### Pages (All Bilingual)
+
 - ✅ Home - Hero, services, stats, CTA
 - ✅ About - Complete CV, experience, awards
 - ✅ Services - All 6 dental services
@@ -136,6 +141,7 @@ Edit `data/reviews.json` and add new review objects following the existing forma
 - ✅ Contact - Info, map, WhatsApp
 
 ### Features
+
 - ✅ Spanish priority (defaults to `/es/`)
 - ✅ Language toggle in navigation
 - ✅ Mobile-first responsive design
@@ -155,6 +161,7 @@ Edit `data/reviews.json` and add new review objects following the existing forma
 ## 📞 Support
 
 If you need help:
+
 1. Check `DEPLOYMENT.md` for detailed deployment guide
 2. Check `PROJECT_SUMMARY.md` for complete feature list
 3. Run `npm run dev` to test locally before deploying
@@ -167,4 +174,3 @@ The website is complete and ready to launch. Just test locally, push to GitHub, 
 
 **Built with Astro + Tailwind CSS**  
 Repository: https://github.com/miguelkylerivera/Astro-Eugenia-Vila-Website
-

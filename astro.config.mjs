@@ -1,19 +1,19 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
-import sitemap from '@astrojs/sitemap';
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://mandocodes1.github.io',
-  base: '/Astro-Eugenia-Vila-Website',
-  trailingSlash: 'always',
+  site: "https://mandocodes1.github.io",
+  base: "/Astro-Eugenia-Vila-Website",
+  trailingSlash: "always",
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
 
-  integrations: [sitemap()]
+  integrations: [sitemap()],
 });

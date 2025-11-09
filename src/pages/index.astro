@@ -1,5 +1,6 @@
 ---
 // Root page that detects language and redirects
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <html lang="es">
@@ -7,13 +8,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
-    <script>
+    <script define:vars={{ baseUrl }}>
       // Detect browser language and redirect
       const browserLang = navigator.language.toLowerCase();
       const isSpanish = browserLang.startsWith('es');
       
-      // Redirect to appropriate language
-      window.location.href = isSpanish ? '/es/' : '/es/'; // Default to Spanish as specified
+      // Redirect to appropriate language (default to Spanish)
+      // Ensure baseUrl ends with / and doesn't duplicate it
+      const normalizedBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+      window.location.href = normalizedBase + '/es/';
     </script>
   </head>
   <body>
